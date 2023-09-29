@@ -1,6 +1,6 @@
-import math from "./math.mjs";
+import lol from "./math.mjs";
 
 console.log("index module starts");
 
-console.log(math.add(5,4));
-console.log(math.subtract(8,2));
+console.log(lol.add(17,21));
+console.log(lol.subtract(123,25));
