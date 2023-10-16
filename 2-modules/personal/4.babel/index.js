@@ -1,6 +1,6 @@
-import math from "./math";
+import hello from "./math.js";
 
-console.log("index module start");
+console.log ("index module starts");
 
-console.log(math.add(3,14));
-console.log(math.subtract(16,8));
+console.log(hello.add(7,5));
+console.log(hello.subtract(18,4));
