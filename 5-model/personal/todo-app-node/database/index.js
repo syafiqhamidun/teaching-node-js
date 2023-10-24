@@ -21,3 +21,12 @@ export const dbInit = async() => {
         process.exit(1);
     }
 };
+
+// Query fetch from node-pg page on internet
+export const query = async (text, params) => {
+    const start = Date.now()
+    const res = await pool.query(text, params)
+    const duration = Date.now() - start
+    console.log('executed query', { text, duration, rows: res.rowCount })
+    return res
+  }
