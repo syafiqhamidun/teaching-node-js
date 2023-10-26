@@ -1,5 +1,6 @@
 
 import pg from "pg";
+import toddoModel from "../model/todo.model.js";
 const { Pool } = pg;
  
 // Establish connection
@@ -16,6 +17,7 @@ export const dbInit = async() => {
     try {
         const data = await pool.query("SELECT NOW()")
         console.log("database connected", data.rows[0].now);
+        await toddoModel();
     } catch (error) {
         console.log(error);
         process.exit(1);
