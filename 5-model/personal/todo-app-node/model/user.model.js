@@ -1,6 +1,6 @@
 import { query } from "../database/index.js";
 
-const toddoModel = async() => {
+const userModel = async() => {
     try {
         await query(
             `CREATE TABLE IF NOT EXISTS users (
@@ -20,4 +20,4 @@ const toddoModel = async() => {
     }
 };
 
-export default toddoModel;
+export default userModel;
